@@ -1,0 +1,18 @@
+#指定版本
+cmake_minimum_required(VERSION 3.5.1)
+
+#设置工程名NetData
+set(PLUGINNETDATA_NAME PluginNetData)
+
+#本工程的名称。
+project(${PLUGINS_NAME})
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    #库文件.so的输出目录
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BIN_DIR}/${PLUGINS_NAME})
+endif()
+
+#add_subdirectory(${PLUGINNETDATA_NAME})
+
+SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
+#SET_PROPERTY(TARGET ${PLUGINNETDATA_NAME} PROPERTY FOLDER ${PLUGINS_NAME})
